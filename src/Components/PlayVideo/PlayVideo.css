@@ -1,0 +1,136 @@
+.play-video{
+    flex-basis: 69%;
+}
+.play-video video{
+    width: 100%;
+}
+
+.play-video h3{
+    margin-top: 10px;
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: 800;
+}
+.play-video p{
+    margin-left: 10px;
+    font-size:16px;
+    font-weight: 800;
+}
+
+.play-video-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    color:#5a5a5a;
+    font-weight: 600;
+}
+.play-video-info img{
+    width: 20px;
+    margin-right: 8px;
+}
+.play-video-info span{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 15px;
+}
+.play-video hr{
+    border: 0;
+    height: 2px;
+    background:#ccc;
+    margin: 10px 0;
+}
+.publisher{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.publisher img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.publisher div{
+    flex:1;
+    line-height: 1.6;
+}
+.publisher p{
+    color:#000;
+    font-weight: 700;
+    font-weight: 18px;
+}
+
+.publisher div span{
+    font-size: 14px;
+    color:#5a5a5a;
+}
+
+.publisher button{
+    background: rgb(206, 12, 12);
+    color:#fff;
+    font-weight: 800;
+    font-size: 18px;
+    padding: 8px 30px;
+    border:0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.video-description{
+    padding-left: 55px;
+    margin: 15px 0;
+}
+
+.video-description p{
+    font-size: 16px;
+    margin-bottom: 5px;
+    color:#5a5a5a;
+}
+.video-description h4{
+    font-size: 20px;
+    color:#5a5a5a;
+    font-weight: 900;
+    margin-top: 15px;
+}
+.comments{
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.comments img{
+    border-radius: 50%;
+    margin-right: 15px;
+
+}
+.comments h3{
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+.comments h3 span   {
+    font-size: 12px;
+    color:#5a5a5a;
+    font-weight: 700;
+    margin-left: 8px;
+}
+
+.comment-action{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    font-size: 14px;
+}
+.comment-action img{
+    border-radius: 0;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.comment-action span{
+    margin-right: 20px;
+    color:#5a5a5a;
+}
