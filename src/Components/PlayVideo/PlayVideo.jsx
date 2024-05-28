@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './PlayVideo.css';
 import {assets} from '../../assets/assets'
-const PlayVideo = () => {
+import moment from 'moment'
+import { API_KEY,value_converter } from '../../../data';
+const PlayVideo = ({videoId}) => {
+  const [apiData,setApiData]=useState(null);
+
+  const fetchVideoData=async()=>{
+    //fetching videos data
+    const videoDetail_url=`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${videoId}|&key=${API_KEY}`;
+    await fetch(videoDetail_url).then(res=>res.json()).then(data=>setApiData(data.items[0]))
+    console.log("data",apiData);
+  }
+
+  useEffect(()=>{
+      fetchVideoData();
+  },[])
   return (
     <div className='play-video'>
-      <video src={assets.video} controls autoPlay muted></video>
-      <h3>Title of video</h3>
+      {/* <video src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} controls autoPlay muted></video> */}
+      
+       <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  allowFullScreen></iframe>
+      <h3>{apiData.snippet.title}</h3>
       <div className="play-video-info">
-        <p>1234 Views &bull; 2days ago</p>
+        <p>{value_converter(apiData.statistics.viewCount)} Views &bull; {moment(apiData.snippet.publishedAt).fromNow()}</p>
         <div>
           <span><img src={assets.like} alt="" />123</span>
           <span><img src={assets.dislike} alt="" />12</span>

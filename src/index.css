@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Sevillana;
+  background-color:beige;
 }
 
 a{
@@ -18,4 +19,6 @@ img{
 .flex-div{
   display: flex;
   align-items: center;
+  background-color:beige;
 }
+
